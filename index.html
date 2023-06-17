@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="selector">
+            <div id="selectFields">
+                <p id="selectText">select social media</p>
+                <img src="arrow.jpg" alt="" id="arrowIcon">
+            </div>
+            <ul id="list" class="hide">
+                <li class="options">
+                    <img src="face.png" alt="">
+                    <p>Facebook</p>
+                </li>
+                <li class="options">
+                    <img src="int.png" alt="">
+                    <p>Instagram</p>
+                </li>
+                <li class="options">
+                    <img src="what.png" alt="">
+                    <p>Whatsapp</p>
+                </li>
+                <li class="options">
+                    <img src="you.png" alt="">
+                    <p>Youtube</p>
+                </li>
+                <li class="options">
+                    <img src="twi.png" alt="">
+                    <p>Twitter</p>
+                </li>
+            </ul>
+        </div>
+
+
+
+    </div>
+
+
+<script>
+    var selectFields = document.getElementById("selectFields");
+    var selectText = document.getElementById("selectText");
+    var options = document.getElementsByClassName("options");
+    var list =document.getElementById("list");
+    var arrowIcon =document.getElementById("arrowIcon");
+
+    selectFields.onclick = function(){
+        list.classList.toggle("hide");
+        arrowIcon.classList.toggle("rotate");
+
+    }
+
+
+
+
+    for(option of options){
+        option.onclick = function(){
+            selectText.innerHTML = this.textContent;
+            list.classList.toggle("hide");
+            arrowIcon.classList.toggle("rotate");
+        }
+    }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
